@@ -30,23 +30,8 @@ function showFormInput() {
     console.log("Email : " + Email.value);
     console.log("++++++++++++++++++++++++++++++++++++++++++");
 }
-//Declaring a function for all Lab4 xhr activities
-function ReadjsonData() {
-    var xhrData = new XMLHttpRequest();
-    xhrData.open("GET", "Scripts/paragraphs.json", "true");
-    xhrData.send(null);
-    xhrData.addEventListener("readyStateChange", ReadyData);
-}
-//ReadyData function
-function ReadyData() {
-    if ((xhrData.readyState === 4) && (xhrData.readyStatus === 200)) {
-        var result = JSON.parse(xhrData.responseText);
-        paragraph = result.paragraph;
-        paragraph.forEach(function(paragraph) {
-            AboutMeParagraph.innerHTML = result.paragraph;
-        }, this);
-    }
-}
+
+
 //Grabbing ContactLink div tag for all possible places
 
 var CL_AboutPage = document.getElementById("CL_AboutPage");
@@ -158,6 +143,6 @@ if (document.title == "ContactMe") {
     //Adding event listener to Form
     Form.addEventListener("click", Final);
 
-    //>>>>Lab 4 Adjustments>>>>>>>>>>>>>>>>>>>>>
+
 
 }
